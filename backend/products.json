@@ -5,7 +5,7 @@
     "descricao": "O sedutor acorde de Maçã Brûlée irá despertar seu jogo da sedução. Seja o mulherão que você é.",
     "preco": 95,
     "categoria": "Perfumes",
-    "imagem": "1749503241337.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503241337.jpg"
   },
   {
     "id": 13,
@@ -13,7 +13,7 @@
     "descricao": "Nova embalagem e mesma fragrância sofisticada com um toque exclusivo do Blend Vínico das Uvas Nerello.",
     "preco": 200,
     "categoria": "Perfumes",
-    "imagem": "1749503414867.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503414867.jpg"
   },
   {
     "id": 14,
@@ -21,7 +21,7 @@
     "descricao": "Inspirada em Floratta Red, Floratta Red Blossom é uma fragrância floral vibrante, ideal para o dia a dia.",
     "preco": 150,
     "categoria": "Perfumes",
-    "imagem": "1749503472429.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503472429.jpg"
   },
   {
     "id": 15,
@@ -29,7 +29,7 @@
     "descricao": "Mergulhe na fragrância amadeirada e fresca de Malbec Ultra Bleu, a versão mais intensa de Malbec Bleu.",
     "preco": 185,
     "categoria": "Perfumes",
-    "imagem": "1749503524851.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503524851.jpg"
   },
   {
     "id": 16,
@@ -37,7 +37,7 @@
     "descricao": "O Frescor da Natureza chegou até você na fragrância com DNA Arbo que vibra com a essência da Mata Atlântica.",
     "preco": 160,
     "categoria": "Perfumes",
-    "imagem": "1749503574145.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503574145.jpg"
   },
   {
     "id": 17,
@@ -45,7 +45,7 @@
     "descricao": "A fragrância feminina que é tão irresistível quanto um doce te convida a seduzir com um toque de diversão.",
     "preco": 160,
     "categoria": "Perfumes",
-    "imagem": "1749503604076.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749503604076.jpg"
   },
   {
     "id": 19,
@@ -53,7 +53,7 @@
     "descricao": "Liz Sublime é uma fragrância feminina da família olfativa Amadeirado Frutal que revela uma faceta leve e alegre.",
     "preco": 162,
     "categoria": "Perfumes",
-    "imagem": "1749504546728.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749504546728.jpg"
   },
   {
     "id": 20,
@@ -61,7 +61,7 @@
     "descricao": "Marcante, equilibra a sensualidade das frutas vermelhas, com o dulçor viciante da baunilha e café arábica.",
     "preco": 199.9,
     "categoria": "Perfumes",
-    "imagem": "1749504612387.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749504612387.jpg"
   },
   {
     "id": 21,
@@ -69,7 +69,7 @@
     "descricao": "Malbec Desodorante Colônia é uma fragrância masculina inesquecível e ideal para o homem sedutor e marcante.",
     "preco": 180,
     "categoria": "Perfumes",
-    "imagem": "1749504669050.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749504669050.jpg"
   },
   {
     "id": 22,
@@ -77,7 +77,7 @@
     "descricao": "Surpreenda com um Kit Presenteável que traz o clássico de Eudora, com a combinação única para encantar.",
     "preco": 180,
     "categoria": "Kit",
-    "imagem": "1749506152251.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749506152251.jpg"
   },
   {
     "id": 23,
@@ -85,6 +85,6 @@
     "descricao": "Com nova fórmula e cheiro envolvente, esta loção corporal mantém a pele hidratada com toque aveludado.",
     "preco": 59.9,
     "categoria": "Hidratante Corporal",
-    "imagem": "1749510759617.jpg"
+    "imagem": "https://cosmeticos-api.onrender.com/uploads/1749510759617.jpg"
   }
 ]

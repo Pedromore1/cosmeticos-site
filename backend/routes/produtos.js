@@ -6,14 +6,18 @@ const fs = require('fs');
 const router = express.Router();
 const filePath = path.join(__dirname, '../products.json');
 
-// Configurar armazenamento de imagens
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, 'uploads/'),
   filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
 });
 const upload = multer({ storage });
 
-// POST - Cadastrar produto
+function getBaseUrl(req) {
+  return `${req.protocol}://${req.get('host')}`;
+}
+
+
 router.post('/', upload.single('imagem'), (req, res) => {
   try {
     const produtos = fs.existsSync(filePath)
@@ -22,15 +26,16 @@ router.post('/', upload.single('imagem'), (req, res) => {
 
     const id = produtos.length ? Math.max(...produtos.map(p => p.id || 0)) + 1 : 1;
 
+    const baseUrl = getBaseUrl(req);
+
     const novoProduto = {
       id,
       nome: req.body.nome,
       descricao: req.body.descricao || '',
       preco: parseFloat(req.body.preco) || 0,
       categoria: req.body.categoria || '',
-      imagem: req.file ? `https://cosmeticos-api.onrender.com/uploads/${req.file.filename}` : ''
+      imagem: req.file ? `${baseUrl}/uploads/${req.file.filename}` : ''
     };
-
 
     produtos.push(novoProduto);
     fs.writeFileSync(filePath, JSON.stringify(produtos, null, 2));
@@ -42,7 +47,7 @@ router.post('/', upload.single('imagem'), (req, res) => {
   }
 });
 
-// GET - Listar produtos
+
 router.get('/', (req, res) => {
   try {
     const produtos = fs.existsSync(filePath)
@@ -55,7 +60,7 @@ router.get('/', (req, res) => {
   }
 });
 
-// DELETE - Excluir produto por ID
+
 router.delete('/:id', (req, res) => {
   const id = parseInt(req.params.id);
 
