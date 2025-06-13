@@ -34,7 +34,7 @@ router.post('/', upload.single('imagem'), (req, res) => {
       descricao: req.body.descricao || '',
       preco: parseFloat(req.body.preco) || 0,
       categoria: req.body.categoria || '',
-      imagem: req.file ? `${baseUrl}/uploads/${req.file.filename}` : ''
+      imagem: req.file ? `${req.file.filename}` : ''
     };
 
     produtos.push(novoProduto);

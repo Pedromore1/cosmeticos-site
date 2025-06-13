@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../service/api';
 import { useNavigate, Link } from 'react-router-dom';
-import {MyForm, MyLink, ProdutosContainer, ProdutoCard} from './admin'
+import { MyForm, MyLink, ProdutosContainer, ProdutoCard } from './admin';
 import { categoriasFixas } from '../../constants/categorias';
 
 export default function Admin() {
@@ -94,7 +94,7 @@ export default function Admin() {
   return (
     <div>
       <button>
-        <MyLink to="/">  🠔 Voltar para área dos produtos </MyLink>
+        <MyLink to="/">🠔 Voltar para área dos produtos</MyLink>
       </button>
 
       <h2>Cadastro de Produto (Admin)</h2>
@@ -149,33 +149,33 @@ export default function Admin() {
 
       <hr />
 
- <h3 style={{ textAlign: 'center', marginTop: '50px', fontSize: '24px' }}>
-  Produtos cadastrados
-  </h3>
+      <h3 style={{ textAlign: 'center', marginTop: '50px', fontSize: '24px' }}>
+        Produtos cadastrados
+      </h3>
 
       <ProdutosContainer>
-       
         {produtos.length === 0 ? (
           <p>Nenhum produto cadastrado.</p>
         ) : (
-          produtos.map(produto => (
-            <ProdutoCard key={produto.id}>
-              <strong>{produto.nome}</strong><br />
-              {produto.imagem && (
-        
-                <img
-                  src={`http://localhost:5000/uploads/${produto.imagem}`}
-                  alt={produto.nome}
-                  style={{ width: 100, height: 100, objectFit: 'cover', borderRadius: 8 }}
-                />
-              )}<br />
-              <span><strong>Categoria:</strong> {produto.categoria}</span><br />
-              <span><strong>Preço:</strong> R$ {produto.preco.toFixed(2)}</span><br />
-              <button onClick={() => handleExcluir(produto.id, produto.nome)}>
-                Excluir
-              </button>
-            </ProdutoCard>
-          ))
+          produtos.map(produto => {
+            const imagemUrl = produto.imagem.startsWith('http')
+              ? produto.imagem
+              : `https://cosmeticos-api.onrender.com/uploads/${produto.imagem}`;
+
+            return (
+              <ProdutoCard key={produto.id}>
+                <strong>{produto.nome}</strong><br />
+                {produto.imagem && (
+                  <img src={imagemUrl} alt={produto.nome} width="100" />
+                )}<br />
+                <span><strong>Categoria:</strong> {produto.categoria}</span><br />
+                <span><strong>Preço:</strong> R$ {Number(produto.preco).toFixed(2)}</span><br />
+                <button onClick={() => handleExcluir(produto.id, produto.nome)}>
+                  Excluir
+                </button>
+              </ProdutoCard>
+            );
+          })
         )}
       </ProdutosContainer>
     </div>
