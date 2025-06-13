@@ -1,0 +1,90 @@
+[
+  {
+    "id": 12,
+    "nome": "Kiss Me Please Desodorante Colônia 50ml",
+    "descricao": "O sedutor acorde de Maçã Brûlée irá despertar seu jogo da sedução. Seja o mulherão que você é.",
+    "preco": 95,
+    "categoria": "Perfumes",
+    "imagem": "1749503241337.jpg"
+  },
+  {
+    "id": 13,
+    "nome": "Malbec Flame Desodorante Colônia 100ml",
+    "descricao": "Nova embalagem e mesma fragrância sofisticada com um toque exclusivo do Blend Vínico das Uvas Nerello.",
+    "preco": 200,
+    "categoria": "Perfumes",
+    "imagem": "1749503414867.jpg"
+  },
+  {
+    "id": 14,
+    "nome": "Floratta Red Blossom Desodorante Colônia 75ml",
+    "descricao": "Inspirada em Floratta Red, Floratta Red Blossom é uma fragrância floral vibrante, ideal para o dia a dia.",
+    "preco": 150,
+    "categoria": "Perfumes",
+    "imagem": "1749503472429.jpg"
+  },
+  {
+    "id": 15,
+    "nome": "Malbec Ultra Bleu Desodorante Colônia 100ml",
+    "descricao": "Mergulhe na fragrância amadeirada e fresca de Malbec Ultra Bleu, a versão mais intensa de Malbec Bleu.",
+    "preco": 185,
+    "categoria": "Perfumes",
+    "imagem": "1749503524851.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Arbo Atlântica Desodorante Colônia 100ml",
+    "descricao": "O Frescor da Natureza chegou até você na fragrância com DNA Arbo que vibra com a essência da Mata Atlântica.",
+    "preco": 160,
+    "categoria": "Perfumes",
+    "imagem": "1749503574145.jpg"
+  },
+  {
+    "id": 17,
+    "nome": "Egeo Dolce Desodorante Colônia 90ml",
+    "descricao": "A fragrância feminina que é tão irresistível quanto um doce te convida a seduzir com um toque de diversão.",
+    "preco": 160,
+    "categoria": "Perfumes",
+    "imagem": "1749503604076.jpg"
+  },
+  {
+    "id": 19,
+    "nome": "LIZ SUBLIME",
+    "descricao": "Liz Sublime é uma fragrância feminina da família olfativa Amadeirado Frutal que revela uma faceta leve e alegre.",
+    "preco": 162,
+    "categoria": "Perfumes",
+    "imagem": "1749504546728.jpg"
+  },
+  {
+    "id": 20,
+    "nome": "Coffee Addictive Oriental Frutal Desodorante Colônia 100ml",
+    "descricao": "Marcante, equilibra a sensualidade das frutas vermelhas, com o dulçor viciante da baunilha e café arábica.",
+    "preco": 199.9,
+    "categoria": "Perfumes",
+    "imagem": "1749504612387.jpg"
+  },
+  {
+    "id": 21,
+    "nome": "Malbec Icon Desodorante Colônia 100ml",
+    "descricao": "Malbec Desodorante Colônia é uma fragrância masculina inesquecível e ideal para o homem sedutor e marcante.",
+    "preco": 180,
+    "categoria": "Perfumes",
+    "imagem": "1749504669050.jpg"
+  },
+  {
+    "id": 22,
+    "nome": "Eau de Parfum + Loção Desodorante Hidratante Corporal 100ml",
+    "descricao": "Surpreenda com um Kit Presenteável que traz o clássico de Eudora, com a combinação única para encantar.",
+    "preco": 180,
+    "categoria": "Kit",
+    "imagem": "1749506152251.jpg"
+  },
+  {
+    "id": 23,
+    "nome": "Loção Desodorante Hidratante Corporal Cuide-se Bem Deleite 400ml",
+    "descricao": "Com nova fórmula e cheiro envolvente, esta loção corporal mantém a pele hidratada com toque aveludado.",
+    "preco": 59.9,
+    "categoria": "Hidratante Corporal",
+    "imagem": "1749510759617.jpg"
+  }
+]
