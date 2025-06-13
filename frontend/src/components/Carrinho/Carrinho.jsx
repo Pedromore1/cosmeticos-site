@@ -1,9 +1,44 @@
 import React, { useState } from 'react';
-import { Container, Title, Content, Products, Summary, Item, ItemName, ButtonGroup, Total, PaymentLabel, Select, CheckoutButton } from './carrinho';
+import {
+    Container,
+    Title,
+    Content,
+    Products,
+    Summary,
+    Item,
+    ItemName,
+    ButtonGroup,
+    Total,
+    PaymentLabel,
+    Select,
+    CheckoutButton
+} from './carrinho';
 
-export default function Carrinho({ itens, onAlterarQuantidade, gerarLinkWhatsApp }) {
+export default function Carrinho({ itens, onAlterarQuantidade }) {
     const total = itens.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
-    const [pagamento, setPagamento] = useState(''); // <- começa vazio
+    const [pagamento, setPagamento] = useState('');
+
+    // 🔥 Função que monta a mensagem do WhatsApp
+    function gerarMensagemWhatsApp() {
+        if (itens.length === 0) return '';
+
+        let mensagem = '*🛍️ Pedido:*\n';
+        let totalPedido = 0;
+
+        itens.forEach(item => {
+            mensagem += `- ${item.nome} x${item.quantidade}\n`;
+            totalPedido += item.preco * item.quantidade;
+        });
+
+        mensagem += `\n*💰 Total:* R$ ${totalPedido.toFixed(2)}`;
+        mensagem += `\n*💳 Pagamento:* ${pagamento}`;
+
+        return mensagem;
+    }
+
+    const linkWhatsApp = pagamento
+        ? `https://wa.me/5524992349807?text=${encodeURIComponent(gerarMensagemWhatsApp())}`
+        : '#';
 
     return (
         <Container>
@@ -44,20 +79,17 @@ export default function Carrinho({ itens, onAlterarQuantidade, gerarLinkWhatsApp
                         </Select>
 
                         <CheckoutButton
-                            href={pagamento ? gerarLinkWhatsApp(pagamento) : '#'}
+                            href={linkWhatsApp}
                             target="_blank"
-
                             rel="noopener noreferrer"
-
                             onClick={(e) => {
                                 if (!pagamento) {
                                     e.preventDefault();
                                     alert("Selecione um método de pagamento.");
                                 }
                             }}
-                               
                         >
-                            Finalize sua Compra
+                            Finalizar Pedido no WhatsApp
                         </CheckoutButton>
                     </Summary>
                 )}
