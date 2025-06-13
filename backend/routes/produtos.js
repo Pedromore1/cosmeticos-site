@@ -28,8 +28,9 @@ router.post('/', upload.single('imagem'), (req, res) => {
       descricao: req.body.descricao || '',
       preco: parseFloat(req.body.preco) || 0,
       categoria: req.body.categoria || '',
-      imagem: req.file ? `${req.file.filename}` : ''
+      imagem: req.file ? `https://cosmeticos-api.onrender.com/uploads/${req.file.filename}` : ''
     };
+
 
     produtos.push(novoProduto);
     fs.writeFileSync(filePath, JSON.stringify(produtos, null, 2));

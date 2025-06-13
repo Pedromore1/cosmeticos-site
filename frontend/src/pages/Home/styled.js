@@ -154,9 +154,10 @@ export const MyUl = styled.ul`
         color: black;
     }
     
-     @media (max-width: 799px) {
+     @media (max-width: 1008px) {
       flex-wrap: nowrap;
       overflow-x: auto;
+      overflow-y: hidden;
       justify-content: flex-start;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
