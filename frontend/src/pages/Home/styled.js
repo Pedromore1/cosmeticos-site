@@ -17,7 +17,7 @@ export const SearchMobile = styled.div`
         width: 85%;
         height: 65px;
       }
-` 
+`
 export const DivLogo = styled.div`
     background-color:#52131b;
     height: 200px;
@@ -116,7 +116,9 @@ export const MyUl = styled.ul`
     list-style: none;
 
     li {
-        width: 190px;
+        width: 85vw;
+        max-width: 190px;
+        min-width: 160px;
         height: 400px;
         background-color: #fff;
         padding: 13px;
@@ -131,6 +133,7 @@ export const MyUl = styled.ul`
 
         @media (max-width: 1008px) {
           border: none;
+          height: 400px;
   }
     }
 

@@ -11,6 +11,8 @@ const Header = styled.header`
     margin-top: 20px;
     padding: 1rem;
     color: white;
+    width: 100%;
+    max-width: 100vw; 
     position: relative;
     flex-direction: column;
     align-items: flex-start;
@@ -26,12 +28,16 @@ const NavLinks = styled.ul`
   @media (max-width: 1008px) {
     display: ${({ open }) => (open ? 'flex' : 'none')};
     flex-direction: column;
+    overflow: hidden;
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100vw;
+    right: 0;
+    width: 100%; 
+    max-width: 100vw;
     background-color: #52131b;
     padding: 1rem;
+    box-sizing: border-box; 
   }
 
   .Categorias {
@@ -39,6 +45,7 @@ const NavLinks = styled.ul`
     color: white;
     font-size: 17px;
     font-weight: bold;
+    word-break: break-word;
   }
 `;
 
@@ -72,14 +79,12 @@ const DesktopOnly = styled.ul`
 `;
 
 export default function NavBarMenu({ menuOpen, setMenuOpen, isHomePage }) {
-   if (!isHomePage) return null; 
+  if (!isHomePage) return null;
 
   return (
     <Header>
-    
-        <Hamburger onClick={() => setMenuOpen(!menuOpen)}>☰</Hamburger>
+      <Hamburger onClick={() => setMenuOpen(!menuOpen)}>☰</Hamburger>
 
-      {/* Links no desktop (visíveis em telas grandes) */}
       <DesktopOnly>
         <li><Link to="/categoria/Perfumes">Perfumes</Link></li>
         <li><Link to="/categoria/Hidratante Corporal">Hidratante Corporal</Link></li>
@@ -88,7 +93,6 @@ export default function NavBarMenu({ menuOpen, setMenuOpen, isHomePage }) {
         <li><Link to="/categoria/Promoções">Promoções</Link></li>
       </DesktopOnly>
 
-      {/* Links no menu lateral (mobile) */}
       <NavLinks open={menuOpen}>
         <li><Link className="Categorias" to="/categoria/Perfumes" onClick={() => setMenuOpen(false)}>Perfumes</Link></li>
         <li><Link className="Categorias" to="/categoria/Hidratante Corporal" onClick={() => setMenuOpen(false)}>Hidratante Corporal</Link></li>
