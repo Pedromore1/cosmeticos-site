@@ -29,7 +29,7 @@ const NavLinks = styled.ul`
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #52131b;
     padding: 1rem;
   }

@@ -2,28 +2,27 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import GlobalStyles from './global';
-import { StyleLink, MyNav, StylesLink } from './app';
+import { StyleLink, MyNav, StylesLink } from './app.js';
 import Home from './pages/Home/home';
 import Admin from './pages/Admin/Admin.jsx';
 import Login from './pages/Login/Login.jsx';
 import CarrinhoPage from './pages/CarrinhoPage/CarrinhoPage.jsx';
 import Navbar from './components/NavBarMenu/NavBarMenu.jsx';
 
-// Componente interno para permitir uso de useLocation
+
 function AppRoutes({ menuOpen, setMenuOpen, carrinho, adicionarAoCarrinho, alterarQuantidade, gerarLinkWhatsApp }) {
   const location = useLocation();
   const isHomePage = location.pathname === '/' || location.pathname.startsWith('/categoria');
 
   return (
     <>
-      {/* Navbar SEMPRE visível */}
+ 
       <Navbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-        isHomePage={isHomePage} // só o botão hambúrguer reage a isso
+        isHomePage={isHomePage} 
       />
 
-      {/* MyNav SEMPRE visível */}
       <MyNav>
         <StyleLink to="/admin">Admin</StyleLink>
         <StylesLink to="/carrinho">🛒 Carrinho ({carrinho.length})</StylesLink>
@@ -55,6 +54,16 @@ export default function App() {
     const salvo = localStorage.getItem('carrinho');
     return salvo ? JSON.parse(salvo) : [];
   });
+
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflowX = 'hidden';
+    } else {
+      document.body.style.overflowX = '';
+    }
+  }, [menuOpen]);
+
 
   useEffect(() => {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
